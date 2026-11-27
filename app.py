@@ -11,7 +11,7 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model():
-    return joblib.load("emlak".pkl")
+    return joblib.load("emlak.pkl")
 
 model = load_model()
 
