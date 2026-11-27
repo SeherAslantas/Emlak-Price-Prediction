@@ -61,6 +61,9 @@ if st.button("Predict House Price", type="primary"):
         "Transaction_month": month
     }])
 
+    st.write("Modelin beklediği özellik sayısı:", model.n_features_in_)
+    st.write("Gönderilen özellik sayısı:", data.shape[1])
+    st.write("Gönderilen sütunlar:", data.columns.tolist())
     prediction = model.predict(data)[0]
 
     st.success(f"Predicted House Price: {prediction:.2f}")
